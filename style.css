@@ -1,0 +1,107 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #26c6da, #80deea);
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.converter-container {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 20px;
+    padding: 30px;
+    width: 100%;
+    max-width: 450px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+    color: #7b1fa2;
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.input-group {
+    margin: 20px 0;
+    position: relative;
+}
+
+select, input[type="number"] {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #8e24aa;
+    border-radius: 10px;
+    background: #fff;
+    font-size: 16px;
+    color: #7b1fa2;
+    transition: all 0.3s ease;
+}
+
+select:hover, input[type="number"]:hover {
+    border-color: #ab47bc;
+}
+
+select:focus, input[type="number"]:focus {
+    outline: none;
+    border-color: #9c27b0;
+    box-shadow: 0 0 10px rgba(156, 39, 176, 0.3);
+}
+
+.input-group::after {
+    content: '▼';
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #8e24aa;
+    pointer-events: none;
+}
+
+input[type="number"] + .input-group::after {
+    content: none;
+}
+
+button {
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(45deg, #8e24aa, #ab47bc);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 25px;
+}
+
+button:hover {
+    background: linear-gradient(45deg, #9c27b0, #ba68c8);
+    box-shadow: 0 5px 15px rgba(171, 71, 188, 0.4);
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+#result {
+    margin-top: 25px;
+    text-align: center;
+    font-size: 18px;
+    color: #7b1fa2;
+    padding: 15px;
+    background: #ede7f6;
+    border-radius: 10px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+#result.error {
+    background: #f3e5f5;
+    color: #6a1b9a;
+}
